@@ -1,0 +1,12 @@
+What does Our Project do?
+Our Project Is a game of blackjack, where you start with 100 dollars and then can bet from there. 
+After placing your bet, you can either be hit with a card or stand.
+If you have a higher number than the dealer, you win, but if you have a lower number or go over 21, you lose.
+
+How to run the Code?
+From the Command Line, you just play the code, and it will ask you how much you want to bet out of 100
+
+
+
+
+
