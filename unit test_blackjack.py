@@ -1,9 +1,21 @@
 
 from blackjack import Card, Hand, Deck, BettingSystem
 
+def test_deck_has_52_cards():
+    deck = Deck()
+    assert len(deck.cards) == 52
+
+def test_deck_deals_card():
+    deck = Deck()
+    card = deck.deal_card()
+    assert isinstance(card, Card)
+    assert len(deck.cards) == 51
+
+
 def test_card_str():
     card = Card("hearts", "Ace")
     assert str(card) == "Ace of hearts"
+    
 def test_deck_has_52_cards():
     deck = Deck()
     assert len(deck.cards) == 52
@@ -57,3 +69,11 @@ def test_lose_bet():
     system.place_bet(10)
     system.lose_bet()
     assert system.get_balance() == 90 
+
+def test_push_bet():
+    system = BettingSystem(100)
+    system.place_bet(40)
+    system.push_bet()
+    assert system.get_balance() == 100
+
+    
